@@ -76,17 +76,19 @@ async function getTarballName() {
   }[os.arch()];
 
   return {
-    linux:  `zig-linux-${arch}-${version}`,
-    darwin: `zig-macos-${arch}-${version}`,
-    win32:  `zig-windows-${arch}-${version}`,
+    linux:   `zig-linux-${arch}-${version}`,
+    darwin:  `zig-macos-${arch}-${version}`,
+    win32:   `zig-windows-${arch}-${version}`,
+    freebsd: `zig-freebsd-${arch}-${version}`,
   }[os.platform()];
 }
 
 async function getTarballExt() {
   return {
-    linux:  '.tar.xz',
-    darwin: '.tar.xz',
-    win32:  '.zip',
+    linux:   '.tar.xz',
+    darwin:  '.tar.xz',
+    win32:   '.zip',
+    freebsd: '.tar.xz',
   }[os.platform()];
 }
 
